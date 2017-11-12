@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+    <string name="description">
+        Dodgeball is a game in which players on two teams try to
+        throw balls at each other while avoiding being hit themselves.
+        A minimum of 3 people on each team is required to start the game.</string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.android.scorekeeper;
 
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         setContentView(R.layout.activity_main);
         displayForTeamA(0,0);
         displayForTeamB(0,0);
@@ -52,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA,foulsTeamA);
     }
 
+    public void minusOneForTeamA(View v) {
+        if(scoreTeamA<=0){
+            return;
+        }
+        scoreTeamA-=1;
+        displayForTeamA(scoreTeamA,foulsTeamA);
+    }
     /**
      * Increase the fouls for Team A by 1 point.
      */
@@ -78,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB+=1;
         displayForTeamB(scoreTeamB,foulsTeamB);
     }
+    public void minusOneForTeamB(View v) {
+        if(scoreTeamB<=0){
+            return;
+        }
+        scoreTeamB-=1;
+        displayForTeamA(scoreTeamB,foulsTeamB);
+    }
 
     /**
      * Increase the fouls for Team B by 1 point.
@@ -99,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetScore(View v){
-        scoreTeamA = 0;
+        scoreTeamA = 3;
         foulsTeamA = 0;
-        scoreTeamB = 0;
+        scoreTeamB = 3;
         foulsTeamB = 0;
         displayForTeamA(scoreTeamA,foulsTeamA);
         displayForTeamB(scoreTeamB,foulsTeamB);

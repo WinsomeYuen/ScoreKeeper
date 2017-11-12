@@ -4,6 +4,6 @@
         <!-- Primary theme color of the app (sets background color of app bar) -->
         <item name="colorPrimary">#EAD8E7</item>
         <!-- Background color of buttons in the app -->
-        <item name="colorButtonNormal">#FAADC8</item>
+        <item name="colorButtonNormal">#B3D4C3</item>
     </style>
 </resources>
