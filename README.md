@@ -11,3 +11,8 @@ This project is about combining various ideas and skills we’ve been practicing
 - Updating views
 - Properly scoping variables
 - Finding views by their ID
+
+<p align="center">
+  <img src="https://c1.staticflickr.com/5/4530/38426916141_98cfa77f65_b.jpg" width="350"/>
+  <img src="https://c1.staticflickr.com/5/4582/26650577639_6bd664a186_b.jpg" width="350"/>
+</p>
